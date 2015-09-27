@@ -1,5 +1,6 @@
 'use strict';
 
+// Quiz#1
 function drawList(listTodoItem) {
   var buffer = document.createDocumentFragment();
   for (var i = 0; i < listTodoItem.length; i++) {
@@ -10,6 +11,7 @@ function drawList(listTodoItem) {
     checkbox.classList.toggle('checked', data.checked);
     checkbox.textContent = checkbox.classList.contains('checked') ?
       '✓' : '\u2610';
+    // Quiz#1
     checkbox.addEventListener('click', function(event) {
       event.target.classList.toggle('checked');
       event.target.textContent = event.target.classList.contains('checked') ?
@@ -29,6 +31,7 @@ function drawList(listTodoItem) {
 }
 
 function drawInput() {
+  // Quiz#1
   var tidyUp = function() {
     var input = document.querySelector('#todo-input');
     input.value = '';
@@ -36,6 +39,7 @@ function drawInput() {
   };
 
   var input = document.querySelector('#todo-input');
+  // Quiz#1
   input.addEventListener('keydown', function(event) {
     if (0x0D === event.keyCode) {
       var data = {
@@ -44,20 +48,26 @@ function drawInput() {
       };
       // To prevent user saving multiple times.
       input.disabled = true;
+      // Quiz#1
       saveData(data, tidyUp);
     }
   });
 }
 
+// Quiz#1
 function saveData(todoItem, afterSave) {
+  // Note this is not an error: we omit the implementation for HW and quizes.
   console.log('saved');
+  // Quiz#1
   afterSave();
 }
 
+// Quiz#1
 function fetchData(afterFetch) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'http://127.0.0.1:8000/demo-list.json', true);
   xhr.responseType = 'json';
+  // Quiz#1
   xhr.onreadystatechange = function(e) {
     // Watch out: we have a mysterious unknown 'this'.
     if (this.readyState == 4 && this.status == 200) {
@@ -73,6 +83,7 @@ function fetchData(afterFetch) {
 
 // Kick off
 document.addEventListener('DOMContentLoaded', function(event) {
+  // Quiz#1
   fetchData(function(response) {
     drawList(response);
     drawInput();
