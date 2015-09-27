@@ -1,0 +1,5 @@
+[
+  {"checked": false, "description": "Do my homework"},
+  {"checked": false, "description": "Have lunch"},
+  {"checked": true, "description": "Go fishing"}
+]
