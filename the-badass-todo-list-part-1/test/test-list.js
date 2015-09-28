@@ -5,6 +5,7 @@ describe('Test TodoListManager', function() {
     assert.isNull(TodoListManager._wrapper.querySelector('li'));
   });
 
+  // Quiz#3
   it('Can save some data', function() {
     var dummyList = [
       {checked: false, description: 'Dummy Todo #1'},
@@ -15,9 +16,11 @@ describe('Test TodoListManager', function() {
     });
   });
 
+  // Quiz#3
   it('Will change one "checked" when the event is coming (BAD PATTERN)',
   function() {
     // Check if it is false before the test
+    // Quiz#3
     assert.isFalse(TodoListManager._listTodoItem[0].checked);
     var dummyCheckElement = document.createElement('div');
     dummyCheckElement.dataset.todoId = '0';

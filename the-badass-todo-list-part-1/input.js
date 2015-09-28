@@ -5,6 +5,7 @@ var TodoInputManager = {
   _input: null, // Will be an element when starting up.
   drawInput(motd) {
     var input = TodoInputManager._input;
+    // Quiz#3
     var tidyUp = function() {
       input.value = '';
       input.disabled = false;
@@ -24,6 +25,7 @@ var TodoInputManager = {
       if (this.readyState == 4 && this.status == 200) {
         var motd = this.response;
         // The flow ends here.
+        // Quiz#3
         afterFetch(motd);
       } else {
         // We omit the error in this novice's example.
@@ -32,11 +34,14 @@ var TodoInputManager = {
     xhr.send();
   },
 
+  // Quiz#3
   saveData(todoItem, afterSave) {
     console.log('saved');
+    // Quiz#3
     afterSave();
   },
 
+  // Quiz#3
   onUserCreateNewTodo(event, afterCreation) {
     var input = TodoInputManager._input;
     if (0x0D === event.keyCode) {
@@ -62,6 +67,7 @@ var TodoInputManager = {
   }
 };
 
+// Quiz#3
 exports.TodoInputManager = TodoInputManager;
 })(window);
 
