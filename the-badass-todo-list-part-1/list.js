@@ -11,6 +11,7 @@
       checkbox.classList.toggle('checked', data.checked);
       checkbox.textContent = checkbox.classList.contains('checked') ?
         '✓' : '\u2610';
+      // Quiz #2
       checkbox.addEventListener('click', function(event) {
         event.target.classList.toggle('checked');
         event.target.textContent = event.target.classList.contains('checked') ?
@@ -29,11 +30,14 @@
     document.querySelector('#todo-list-wrapper').appendChild(list);
   }
 
+  // Quiz #2
   function saveData(todoItem, afterSave) {
     console.log('saved');
+    // Quiz #2
     afterSave();
   }
 
+  // Quiz #2
   function fetchData(afterFetch) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://127.0.0.1:8000/demo-list.json', true);
@@ -43,6 +47,7 @@
       if (this.readyState == 4 && this.status == 200) {
         var listData = this.response;
         // The flow ends here.
+        // Quiz #2
         afterFetch(listData);
       } else {
         // We omit the error in this novice's example.
@@ -52,8 +57,10 @@
   }
 
   // Kick off
+  // Quiz #2
   document.addEventListener('DOMContentLoaded', function(event) {
     fetchData(function(response) {
+      // Quiz #2
       drawList(response);
     });
   });
