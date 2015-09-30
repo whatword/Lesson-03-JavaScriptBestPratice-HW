@@ -1,0 +1,25 @@
+[
+  { "title": "Inside Japan’s Disposable Housing Market",
+    "passages": [
+    "In a culture obsessed with newness, no one wants a 'used' home—which makes the Japanese real estate market almost unrecognizable to an American.",
+    "The 58-year-old writer, born in a sleepy bayside suburb on the north shore of New York’s Long Island, had lived in the country for more than 15 years. He and his wife, Masako Tsubuku, 57, scoured the home market for something affordable and livable, only to find dilapidated houses that even the real estate agents expected them to demolish and re-build upon."
+  ]},
+
+  { "title": "How coffee loves us back",
+    "passages": [
+    "Coffee, said the Napoleon-era French diplomat Talleyrand, should be hot as hell, black as the devil, pure as an angel, sweet as love.",
+    "Bach wrote a cantata in its honor, writers rely on it, and, according to legend, a pope blessed it. Lady Astor once reportedly remarked that if she were Winston Churchill’s wife, she’d poison his coffee, to which Churchill acerbically replied: “If I were married to you, I’d drink it.”"
+  ]},
+
+  { "title": "Two HN Announcements",
+    "passages": [
+    "The HN community feels like it owns HN, and we like it that way. HN has become an important institution in the tech community, and though it was initially developed for YC founders it's clearly evolved into much more than that.",
+    "We've always felt that the best way for HN to benefit YC is simply for it to maximally benefit the community, which mostly means keeping the story and discussion quality as high as possible. We read it ourselves, so we want that as much as anyone."
+  ]},
+
+  { "title": "SERVICE-ORIENTED ARCHITECTURE: SCALING OUR CODEBASE AS WE GROW",
+    "passages": [
+    "Like many startups, Uber began its journey with a monolithic architecture, built for a single offering in a single city. At the time, all of Uber was our UberBLACK option and our “world” was San Francisco. Having one codebase seemed “clean” at the time, and solved our core business problems, which included connecting drivers with riders, billing, and payments. It was reasonable back then to have all of Uber’s business logic in one place. As we rapidly expanded into more cities and introduced new products, this quickly changed.",
+    "As core domain models grew and new features were introduced, our components became tightly coupled, and enforcing encapsulation made separation of concerns difficult. Continuous integration turned into a liability because deploying the codebase meant deploying everything at once. Our engineering team experienced rapid growth and scaling, which not only meant handling more requests but also handling a significant increase in developer activity. Adding new features, fixing bugs, and resolving technical debt all in a single repo became extremely difficult. Tribal knowledge was required before attempting to make a single change."
+  ]}
+]
