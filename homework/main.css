@@ -1,0 +1,10 @@
+
+#note-content-wrapper {
+  border-top: #CCC 2px solid;
+  border-bottom: #CCC 2px solid;
+  width: 80%;
+}
+
+.note-title {
+  cursor: pointer;
+}
